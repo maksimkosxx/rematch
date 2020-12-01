@@ -1,6 +1,9 @@
 import { Plugin, Models } from '@rematch/core'
-import produce from 'immer'
 import Redux from 'redux'
+import { enableES5, enableMapSet, produce } from 'immer'
+
+enableES5()
+enableMapSet()
 
 export type ImmerPluginConfig = {
 	whitelist?: string[]
